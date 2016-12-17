@@ -6,7 +6,7 @@ import javax.inject.Named;
 import com.indoqa.boot.proxy.AbstractProxyResourceBase;
 
 @Named
-public class TimezoneProxyResource extends AbstractProxyResourceBase {
+public class GeonamesProxyResource extends AbstractProxyResourceBase {
 
     @PostConstruct
     public void mount() {

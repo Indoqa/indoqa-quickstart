@@ -16,6 +16,7 @@ public class AppStartupLifecycle extends AbstractStartupLifecycle {
 
     @Override
     public void willCreateDefaultSparkRoutes() {
+        // the FrontendResource must be registered before any Spark routes are registered
         this.context.register(FrontendResource.class);
     }
 }
