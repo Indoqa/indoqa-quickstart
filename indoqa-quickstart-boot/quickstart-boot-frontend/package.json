@@ -1,20 +1,16 @@
 {
-  "name": "indoqa-react-redux-archetype",
+  "name": "quickstart-boot-frontend",
   "version": "0.0.0",
-  "description": "Indoqa React/Redux Archetype",
-  "license": "Apache-2.0",
+  "description": "Quickstart Indoqa Boot: Frontend",
+  "license": "UNLICENSED",
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:Indoqa/indoqa-react-redux.git"
-  },
   "scripts": {
     "start": "node ./src/dev/server.js",
     "lint": "indoqa-eslint ./src/main",
     "package": "indoqa-webpack indoqa-webpack-options.js",
     "test": "cross-env NODE_ENV=test mocha ./src/test --recursive --compilers js:babel-register --require ./src/test/setup.js",
-    "test:watch": "npm test -- --watch",
-    "postinstall": "npm run package"
+    "test:watch": "yarn test -- --watch",
+    "postinstall": "yarn run package"
   },
   "dependencies": {
     "immutable": "^3.7.6",
