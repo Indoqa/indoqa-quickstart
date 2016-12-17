@@ -1,6 +1,6 @@
 # Indoqa Quickstart
 
-## Quickstart an Indoqa-Boot project
+## Create and use the Indoqa-Boot archetype
 ```bash
 ./createIndoqaBootArchetype.sh
 cd /tmp
