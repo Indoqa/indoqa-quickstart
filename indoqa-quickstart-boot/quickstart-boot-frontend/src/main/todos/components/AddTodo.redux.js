@@ -1,24 +1,26 @@
-import React from 'react'
+import React, {PropTypes} from 'react'
 import {connect} from 'react-redux'
 import {addTodo} from '../actions'
 
-let AddTodo = ({dispatch}) => { // eslint-disable-line react/prop-types
+const AddTodo = ({dispatch}) => {
   let input
 
   return (
     <div>
-      <form onSubmit={e => {
-        e.preventDefault()
-        if (!input.value.trim()) {
-          return
-        }
-        dispatch(addTodo(input.value))
-        input.value = ''
-      }}
-      >
-        <input ref={node => {
-          input = node
+      <form
+        onSubmit={(e) => {
+          e.preventDefault()
+          if (!input.value.trim()) {
+            return
+          }
+          dispatch(addTodo(input.value))
+          input.value = ''
         }}
+      >
+        <input
+          ref={(node) => {
+            input = node
+          }}
         />
         <button type="submit">
           Add Todo
@@ -28,6 +30,8 @@ let AddTodo = ({dispatch}) => { // eslint-disable-line react/prop-types
   )
 }
 
-AddTodo = connect()(AddTodo)
+AddTodo.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+}
 
-export default AddTodo
+export default connect()(AddTodo)

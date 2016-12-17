@@ -3,8 +3,6 @@ import AddTodo from '../components/AddTodo.redux'
 import Footer from '../components/Footer.react'
 import VisibleTodoList from '../components/TodoList.redux'
 
-import './Page.styl'
-
 class TodoPage extends React.Component {
   render() {
     return (

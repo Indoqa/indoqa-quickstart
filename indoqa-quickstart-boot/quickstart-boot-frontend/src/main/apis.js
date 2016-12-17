@@ -8,5 +8,3 @@ export const fetchGeonames = (url, options) => {
 
   return fetchApi(url, proxyOptions, options)
 }
-
-// Add additional wrappers for every REST API
