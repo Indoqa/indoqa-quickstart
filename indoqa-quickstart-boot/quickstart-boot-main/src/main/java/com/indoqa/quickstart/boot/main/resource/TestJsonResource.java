@@ -1,4 +1,4 @@
-package com.indoqa.quickstart.boot.main;
+package com.indoqa.quickstart.boot.main.resource;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Named;
@@ -6,11 +6,11 @@ import javax.inject.Named;
 import com.indoqa.boot.AbstractJsonResourcesBase;
 
 @Named
-public class TestResource extends AbstractJsonResourcesBase {
+public class TestJsonResource extends AbstractJsonResourcesBase {
 
     @PostConstruct
     public void mount() {
-        this.get("/test", (req, res) -> new TestObject("indoqa-boot"));
+        this.get("/test", (req, res) -> new TestObject("Indoqa Quickstart Boot"));
     }
 
     public static class TestObject {

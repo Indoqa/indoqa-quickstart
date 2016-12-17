@@ -7,7 +7,7 @@ public class Main extends AbstractIndoqaBootApplication {
     private static final String BASE_PACKAGE = Main.class.getPackage().getName();
 
     public static void main(String[] args) {
-        new Main().invoke();
+        new Main().invoke(new AppStartupLifecycle());
     }
 
     @Override

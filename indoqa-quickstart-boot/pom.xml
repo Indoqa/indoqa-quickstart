@@ -20,6 +20,7 @@
   <modules>
     <module>quickstart-boot-main</module>
     <module>quickstart-boot-it</module>
+    <module>quickstart-boot-frontend</module>
   </modules>
 
   <dependencyManagement>
@@ -39,6 +40,15 @@
       <dependency>
       	<groupId>com.indoqa.quickstart</groupId>
       	<artifactId>quickstart-boot-main</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.indoqa.quickstart</groupId>
+        <artifactId>quickstart-boot-frontend</artifactId>
+        <version>${project.version}</version>
+        <classifier>dist</classifier>
+        <type>zip</type>
+        <scope>runtime</scope>      
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -83,6 +93,10 @@
         <configuration>
           <encoding>${project.build.sourceEncoding}</encoding>
         </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <version>3.0.0</version>
       </plugin>
     </plugins>
   </build>

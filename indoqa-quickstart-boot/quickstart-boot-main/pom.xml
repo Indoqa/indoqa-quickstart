@@ -19,7 +19,22 @@
     <dependency>
       <groupId>com.indoqa</groupId>
       <artifactId>indoqa-boot</artifactId>
-    </dependency> 
+    </dependency>
+    
+    <!-- HTTP-Client -->
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+    </dependency>
+
+    <!-- Frontend -->
+    <dependency>
+      <groupId>com.indoqa.quickstart</groupId>
+      <artifactId>quickstart-boot-frontend</artifactId>
+      <classifier>dist</classifier>
+      <type>zip</type>
+      <scope>runtime</scope>      
+    </dependency>
 
     <!-- Test -->
     <dependency>
@@ -33,7 +48,6 @@
     <plugins>
       <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
-        <version>3.0.0</version>
         <configuration>
           <descriptors>
             <descriptor>src/main/assembly/runnable-jar.xml</descriptor>
