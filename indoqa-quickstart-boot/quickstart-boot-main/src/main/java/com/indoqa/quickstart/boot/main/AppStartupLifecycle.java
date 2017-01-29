@@ -7,16 +7,9 @@ import com.indoqa.quickstart.boot.main.resource.FrontendResource;
 
 public class AppStartupLifecycle extends AbstractStartupLifecycle {
 
-    private AnnotationConfigApplicationContext context;
-
     @Override
-    public void didCreateSpringContext(AnnotationConfigApplicationContext context) {
-        this.context = context;
-    }
-
-    @Override
-    public void willCreateDefaultSparkRoutes() {
+    public void willCreateDefaultSparkRoutes(AnnotationConfigApplicationContext context) {
         // the FrontendResource must be registered before any Spark routes are registered
-        this.context.register(FrontendResource.class);
+        context.register(FrontendResource.class);
     }
 }
