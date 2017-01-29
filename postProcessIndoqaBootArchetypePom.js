@@ -25,6 +25,16 @@ const modifyPom = () => {
   fs.writeFileSync(pomPath, result, 'utf8', (err) => {
      if (err) return console.log(err)
   })
+
+  console.log(`Modified ${pomPath}`)
+}
+
+const removeUnnecessaryFiles = () => {
+  const projectFile = './indoqa-quickstart-boot/target/generated-sources/archetype/src/main/resources/archetype-resources/.project'
+  fs.unlinkSync(projectFile)
+
+  console.log(`Removed ${projectFile}`)
 }
 
 modifyPom()
+removeUnnecessaryFiles()
