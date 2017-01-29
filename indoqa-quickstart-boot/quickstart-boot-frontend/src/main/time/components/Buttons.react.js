@@ -12,10 +12,10 @@ const Buttons = ({loadVienna, loadNewYork, loadInvalidLocation, clear}) => (
 )
 
 Buttons.propTypes = {
-  loadVienna: PropTypes.func,
-  loadNewYork: PropTypes.func,
-  loadInvalidLocation: PropTypes.func,
-  clear: PropTypes.func
+  loadVienna: PropTypes.func.isRequired,
+  loadNewYork: PropTypes.func.isRequired,
+  loadInvalidLocation: PropTypes.func.isRequired,
+  clear: PropTypes.func.isRequired,
 }
 
 export default Buttons

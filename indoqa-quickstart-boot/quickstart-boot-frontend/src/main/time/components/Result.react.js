@@ -23,9 +23,9 @@ const Result = ({result, error, isLoading}) => {
 }
 
 Result.propTypes = {
-  result: PropTypes.object,
-  error: PropTypes.string,
-  isLoading: PropTypes.bool
+  result: PropTypes.object.isRequired,
+  error: PropTypes.string.isRequired,
+  isLoading: PropTypes.bool.isRequired,
 }
 
 export default Result
