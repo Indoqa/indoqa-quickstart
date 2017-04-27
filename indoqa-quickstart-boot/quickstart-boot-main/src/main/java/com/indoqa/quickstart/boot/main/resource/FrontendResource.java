@@ -8,7 +8,7 @@ public class FrontendResource extends AbstractReactFrontendResource {
 
     private static final String MOUNT_PATH = "/*";
     private static final String CLASSPATH_LOCATION = "/quickstart-boot-frontend";
-    private static final String FILESYSTEM_LOCATION = new File("../quickstart-boot-/target").getPath();
+    private static final String FILESYSTEM_LOCATION = new File("../quickstart-boot-frontend/target").getPath();
 
     public FrontendResource() {
         super(MOUNT_PATH, CLASSPATH_LOCATION, FILESYSTEM_LOCATION);
