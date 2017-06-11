@@ -2,15 +2,17 @@ package com.indoqa.quickstart.boot.main.resource;
 
 import java.io.File;
 
-import com.indoqa.boot.jsapp.AbstractReactFrontendResource;
+import javax.annotation.PostConstruct;
 
-public class FrontendResource extends AbstractReactFrontendResource {
+import com.indoqa.boot.html.react.AbstractReactResourceBase;
 
-    private static final String MOUNT_PATH = "/*";
+public class FrontendResource extends AbstractReactResourceBase {
+
     private static final String CLASSPATH_LOCATION = "/quickstart-boot-frontend";
     private static final String FILESYSTEM_LOCATION = new File("../quickstart-boot-frontend/target").getPath();
 
-    public FrontendResource() {
-        super(MOUNT_PATH, CLASSPATH_LOCATION, FILESYSTEM_LOCATION);
+    @PostConstruct
+    public void mount() {
+        this.html("/", CLASSPATH_LOCATION, FILESYSTEM_LOCATION);
     }
 }
