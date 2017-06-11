@@ -1,5 +1,7 @@
 package com.indoqa.quickstart.boot.main;
 
+import java.io.File;
+
 import com.indoqa.boot.AbstractIndoqaBootApplication;
 
 public class Main extends AbstractIndoqaBootApplication {
@@ -13,5 +15,10 @@ public class Main extends AbstractIndoqaBootApplication {
     @Override
     protected String[] getComponentScanBasePackages() {
         return new String[] {BASE_PACKAGE};
+    }
+
+    @Override
+    protected boolean isDevEnvironment() {
+        return new File("../quickstart-boot-frontend/target").exists();
     }
 }
