@@ -1,5 +1,7 @@
 package com.indoqa.quickstart.boot.main;
 
+import static com.indoqa.quickstart.boot.main.resource.FrontendResource.FRONTEND_FILESYSTEM_LOCATION;
+
 import java.io.File;
 
 import com.indoqa.boot.AbstractIndoqaBootApplication;
@@ -19,6 +21,6 @@ public class Main extends AbstractIndoqaBootApplication {
 
     @Override
     protected boolean isDevEnvironment() {
-        return new File("../quickstart-boot-frontend/target").exists();
+        return new File(FRONTEND_FILESYSTEM_LOCATION).exists();
     }
 }
