@@ -10,6 +10,7 @@ rsync -a -v --delete \
   --exclude "docs" \
   --exclude "target" \
   --exclude "indoqa-webpack-docs.js" \
+  --exclude "README.md" \
   --exclude ".git" \
   ../indoqa-react-redux/ "./indoqa-quickstart-boot/quickstart-boot-frontend"
 
