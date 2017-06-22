@@ -25,6 +25,8 @@ cd ..
 node postProcessIndoqaQuickstartBoot.js
 
 # locally install the archetype
-cd ./indoqa-quickstart-boot/target/generated-sources/archetype/
-mvn install -Drat.skip=true
-cd ../../../../../
+# cd ./indoqa-quickstart-boot/target/generated-sources/archetype/
+# mvn install -Drat.skip=true
+# cd ../../../../../
+
+cp -R ./indoqa-quickstart-boot/target/generated-sources/archetype/ ./indoqa-quickstart-boot_release

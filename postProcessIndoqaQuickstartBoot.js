@@ -7,7 +7,7 @@ const modifyPom = () => {
   const replacement = `<parent>
     <groupId>com.indoqa</groupId>
     <artifactId>indoqa-oss-parent</artifactId>
-    <version>4</version>
+    <version>5</version>
   </parent>
 
   <name>quickstart-boot-archetype</name>
