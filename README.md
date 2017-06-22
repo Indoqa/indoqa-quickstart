@@ -6,3 +6,12 @@
 cd /tmp
 mvn archetype:generate -DarchetypeCatalog=local
 ```
+
+
+## Release
+
+ * ./createIndoqaBootArchetype.sh
+ * mkdir ./releases/indoqa-quickstart-boot-{version}
+ * cp -R indoqa-quickstart-boot/target/generated-sources/archetype to ./releases/indoqa-quickstart-boot-{version}
+ * mvn release:prepare
+ * mvn release:perform '-Darguments=-Drat.skip=true'
