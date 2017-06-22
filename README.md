@@ -11,7 +11,7 @@ mvn archetype:generate -DarchetypeCatalog=local
 ```bash
 ./createIndoqaBootArchetype.sh
 mkdir ./releases/indoqa-quickstart-boot-{version}
-cp -R indoqa-quickstart-boot/target/generated-sources/archetype to ./releases/indoqa-quickstart-boot-{version}
+cp -R indoqa-quickstart-boot/target/generated-sources/archetype ./releases/indoqa-quickstart-boot-{version}
 mvn release:prepare
 mvn release:perform '-Darguments=-Drat.skip=true'
 ```
