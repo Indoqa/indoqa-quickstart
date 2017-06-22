@@ -16,7 +16,7 @@ import com.indoqa.system.test.tools.JarRunnerBuilder;
 public class SimpleIT {
 
     private static final Logger LOGGER = getLogger(SimpleIT.class);
-    private static final int PORT = 14567;
+    private static final int PORT = 25000;
     private static final String BASE_URL = "http://localhost:" + PORT;
     private static final String CHECK_ADDRESS = BASE_URL + "/system-info";
     private static final Path RUNNABLE_DIR = Paths.get("../quickstart-boot-main/target/");

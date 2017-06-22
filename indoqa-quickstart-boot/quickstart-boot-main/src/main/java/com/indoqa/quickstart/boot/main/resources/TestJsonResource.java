@@ -1,9 +1,9 @@
-package com.indoqa.quickstart.boot.main.resource;
+package com.indoqa.quickstart.boot.main.resources;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Named;
 
-import com.indoqa.boot.AbstractJsonResourcesBase;
+import com.indoqa.boot.json.resources.AbstractJsonResourcesBase;
 
 @Named
 public class TestJsonResource extends AbstractJsonResourcesBase {

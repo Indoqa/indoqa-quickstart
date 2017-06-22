@@ -58,7 +58,7 @@
             </manifest>
             <manifestEntries>
               <Implementation-Build>${project.version}</Implementation-Build>
-              <delegatedMainClass>${package}.main.Main</delegatedMainClass>
+              <delegatedMainClass>${package}.main.Application</delegatedMainClass>
             </manifestEntries>
           </archive>
         </configuration>

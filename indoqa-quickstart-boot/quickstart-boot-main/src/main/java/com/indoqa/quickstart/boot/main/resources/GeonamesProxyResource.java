@@ -1,4 +1,4 @@
-package com.indoqa.quickstart.boot.main.resource;
+package com.indoqa.quickstart.boot.main.resources;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Named;

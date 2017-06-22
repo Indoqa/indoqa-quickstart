@@ -14,7 +14,7 @@
     <project.build.compiler.version>1.8</project.build.compiler.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-    <indoqa-boot-version>0.7.0</indoqa-boot-version>
+    <indoqa-boot-version>0.7.1-SNAPSHOT</indoqa-boot-version>
   </properties>
 
   <modules>
@@ -48,7 +48,7 @@
         <version>${project.version}</version>
         <classifier>dist</classifier>
         <type>zip</type>
-        <scope>runtime</scope>      
+        <scope>runtime</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>
