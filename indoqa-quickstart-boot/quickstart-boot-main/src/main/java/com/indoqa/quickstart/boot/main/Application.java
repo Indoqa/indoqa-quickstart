@@ -1,9 +1,5 @@
 package com.indoqa.quickstart.boot.main;
 
-import static com.indoqa.quickstart.boot.main.resources.FrontendResource.FRONTEND_FILESYSTEM_LOCATION;
-
-import java.io.File;
-
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.indoqa.boot.application.AbstractIndoqaBootApplication;
@@ -27,11 +23,6 @@ public class Application extends AbstractIndoqaBootApplication {
     @Override
     protected String[] getComponentScanBasePackages() {
         return new String[] {BASE_PACKAGE};
-    }
-
-    @Override
-    protected boolean isDevEnvironment() {
-        return new File(FRONTEND_FILESYSTEM_LOCATION).exists();
     }
 
     private static class ApplicationStartupLifecycle extends AbstractStartupLifecycle {
