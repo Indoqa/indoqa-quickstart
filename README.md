@@ -16,6 +16,8 @@ mvn archetype:generate -DarchetypeCatalog=local
 ```bash
 ./createIndoqaBootArchetype.sh
 cd ../indoqa-quickstart-boot_release
+git add -A 
+git commit -m "prepare release"
 mvn release:prepare
 mvn release:perform '-Darguments=-Drat.skip=true'
 ```
