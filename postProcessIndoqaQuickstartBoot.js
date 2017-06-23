@@ -13,9 +13,9 @@ const modifyPom = () => {
   <name>quickstart-boot-archetype</name>
 
   <scm>
-    <connection>scm:git:git@github.com:Indoqa/indoqa-quickstart.git</connection>
-    <developerConnection>scm:git:git@github.com:Indoqa/indoqa-quickstart.git</developerConnection>
-    <url>https://github.com/Indoqa/indoqa-quickstart</url>
+    <connection>scm:git:git@github.com:Indoqa/indoqa-quickstart-boot_release.git</connection>
+    <developerConnection>scm:git:git@github.com:Indoqa/indoqa-quickstart-boot_release.git</developerConnection>
+    <url>https://github.com/Indoqa/indoqa-quickstart-boot_release</url>
     <tag>HEAD</tag>
   </scm>
   `
