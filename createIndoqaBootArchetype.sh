@@ -11,6 +11,8 @@ rsync -a -v --delete \
   --exclude "target" \
   --exclude "indoqa-webpack-docs.js" \
   --exclude "README.md" \
+  --exclude "indoqa-react-redux.iml" \
+  --exclude "yarn.lock" \
   --exclude ".git" \
   ../indoqa-react-redux/ "./indoqa-quickstart-boot/quickstart-boot-frontend"
 
@@ -30,4 +32,14 @@ mvn install -Drat.skip=true
 
 cd ../../../../
 
-rsync -a -v --delete --exclude "target" --exclude "LICENSE" --exclude ".project" --exclude ".classpath" --exclude ".settings" --exclude "README.md" --exclude ".gitignore" --exclude ".git" ./indoqa-quickstart-boot/target/generated-sources/archetype/ ../indoqa-quickstart-boot_release
+# sync the archetype output with the release project
+#rsync -a -v --delete \
+#  --exclude "target" \
+#  --exclude "LICENSE" \
+#  --exclude ".project" \
+#  --exclude ".classpath" \
+#  --exclude ".settings" \
+#  --exclude "README.md" \
+#  --exclude ".gitignore" \
+#  --exclude ".git" \
+#  ./indoqa-quickstart-boot/target/generated-sources/archetype/ ../indoqa-quickstart-boot_release

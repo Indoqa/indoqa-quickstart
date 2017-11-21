@@ -6,3 +6,5 @@ bin
 .metadata
 .recommenders
 monitor.json 
+*.iml
+.idea
