@@ -14,13 +14,15 @@ rsync -a -v --delete \
   --exclude "indoqa-react-redux.iml" \
   --exclude "yarn.lock" \
   --exclude ".git" \
+  --exclude ".idea" \
   ../indoqa-react-redux/ "./indoqa-quickstart-boot/quickstart-boot-frontend"
 
 # create the archetype project from the project
 cd ./indoqa-quickstart-boot
 mvn clean archetype:create-from-project \
   -Darchetype.filteredExtensions=json \
-  -Drat.skip=true
+  -Drat.skip=true \
+  -P !frontend
 
 # post process the created archetype (adapt some names, etc.)
 cd ..
