@@ -1,10 +1,5 @@
 # Indoqa Quickstart
 
-## Use released archetype
-```bash
-mvn archetype:generate -DarchetypeGroupId=com.indoqa.quickstart -DarchetypeArtifactId=quickstart-boot-archetype -DarchetypeVersion=[version]
-```
-
 ## Create and use the Indoqa-Boot archetype
 ```bash
 ./createIndoqaBootArchetype.sh
