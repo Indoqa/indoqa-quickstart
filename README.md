@@ -9,8 +9,8 @@ mvn archetype:generate -DarchetypeCatalog=local
 
 ## Release
 * make sure that indoqa-react-redux contains all the expected resources
-** upgrading all dependencies
-** tag the release manually: `git tag [tagname]` and push it to the remote repository
+  * upgrading all dependencies
+  * tag the release manually: `git tag [tagname]` and push it to the remote repository
 * release indoqa-boot-bom
 * release indoqa-boot (set the version of indoqa-boot-bom to the released version because using ${project.version} does not resolve correctly)
 * set the indoqa-boot version of this archetype project to the expected version
