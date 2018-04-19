@@ -15,6 +15,7 @@ rsync -a -v --delete \
   --exclude "yarn.lock" \
   --exclude ".git" \
   --exclude ".idea" \
+  --exclude ".vscode" \
   ../indoqa-react-redux/ "./indoqa-quickstart-boot/quickstart-boot-frontend"
 
 # create the archetype project from the project
