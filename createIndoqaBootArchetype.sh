@@ -16,7 +16,7 @@ rsync -a -v --delete \
   --exclude ".git" \
   --exclude ".idea" \
   --exclude ".vscode" \
-  ../indoqa-react-redux/ "./indoqa-quickstart-boot/quickstart-boot-frontend"
+  ../indoqa-react-redux-ts/ "./indoqa-quickstart-boot/quickstart-boot-frontend"
 
 # create the archetype project from the project
 cd ./indoqa-quickstart-boot
