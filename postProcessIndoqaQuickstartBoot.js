@@ -47,8 +47,8 @@ const modifyPackageJson = () => {
   const result = data
     .replace(/Apache-2\.0/g, 'UNLICENSED')
     .replace(/"version":.".\..\..",/g, versionReplacement)
-    .replace(/indoqa-react-redux-archetype/g, 'quickstart-indoqa-boot-frontend')
-    .replace(/Indoqa React\/Redux Archetype/g, 'Quickstart Indoqa Boot: Frontend')
+    .replace(/indoqa-react-redux-ts/g, 'quickstart-indoqa-boot-frontend')
+    .replace(/Indoqa React\/Redux Typescript Archetype/g, 'Quickstart Indoqa Boot: Frontend')
     .replace(/git@github\.com:Indoqa\/indoqa-react-redux.git/g, 'git@github.com:Organization/project-name')
     .replace(/    "docs": "indoqa-webpack \.\/indoqa-webpack-docs\.js",\n/g,'')
 
