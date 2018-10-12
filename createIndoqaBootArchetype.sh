@@ -36,13 +36,13 @@ mvn install -Drat.skip=true
 cd ../../../../
 
 # sync the archetype output with the release project
-#rsync -a -v --delete \
-#  --exclude "target" \
-#  --exclude "LICENSE" \
-#  --exclude ".project" \
-#  --exclude ".classpath" \
-#  --exclude ".settings" \
-#  --exclude "README.md" \
-#  --exclude ".gitignore" \
-#  --exclude ".git" \
-#  ./indoqa-quickstart-boot/target/generated-sources/archetype/ ../indoqa-quickstart-boot_release
+rsync -a -v --delete \
+  --exclude "target" \
+  --exclude "LICENSE" \
+  --exclude ".project" \
+  --exclude ".classpath" \
+  --exclude ".settings" \
+  --exclude "README.md" \
+  --exclude ".gitignore" \
+  --exclude ".git" \
+  ./indoqa-quickstart-boot/target/generated-sources/archetype/ ../indoqa-quickstart-boot_release
