@@ -13,7 +13,10 @@
   <fileSets>
     <fileSet>
       <directory>target/webpack/</directory>
-      <outputDirectory>${project.artifactId}/</outputDirectory>
+      <excludes>
+        <exclude>index.html</exclude>
+      </excludes>
+      <outputDirectory>${project.artifactId}</outputDirectory>
     </fileSet>
   </fileSets>
 
