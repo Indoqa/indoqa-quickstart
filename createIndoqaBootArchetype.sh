@@ -16,7 +16,7 @@ rsync -a -v --delete \
 # create the archetype project from the project
 cd ./indoqa-quickstart-boot
 mvn clean archetype:create-from-project \
-  -Darchetype.filteredExtentions=json \
+  -Darchetype.filteredExtentions=json,java \
   -Drat.skip=true \
   -P !frontend
 
