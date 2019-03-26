@@ -1,27 +1,27 @@
 #!/bin/sh
 
 # sync frontend with indoqa-react-redux
-rsync -a -v --delete \
-  --exclude "node_modules" \
-  --exclude ".gitignore" \
-  --exclude "pom.xml" \
-  --exclude "dist-zip.xml" \
-  --exclude "src/doc" \
-  --exclude "docs" \
-  --exclude "target" \
-  --exclude "indoqa-webpack-docs.js" \
-  --exclude "README.md" \
-  --exclude "indoqa-react-redux.iml" \
-  --exclude "yarn.lock" \
-  --exclude ".git" \
-  --exclude ".idea" \
-  --exclude ".vscode" \
-  ../indoqa-react-redux-ts/ "./indoqa-quickstart-boot/quickstart-boot-frontend"
+#rsync -a -v --delete \
+#  --exclude "node_modules" \
+#  --exclude ".gitignore" \
+#  --exclude "pom.xml" \
+#  --exclude "dist-zip.xml" \
+#  --exclude "src/doc" \
+#  --exclude "compiled" \
+#  --exclude "build" \
+#  --exclude "README.md" \
+#  --exclude "CHANGELOG.md" \
+#  --exclude "indoqa-react-redux.iml" \
+#  --exclude "yarn.lock" \
+#  --exclude ".git" \
+#  --exclude ".idea" \
+#  --exclude ".vscode" \
+#  ../indoqa-react/packages/react-starter/ "./indoqa-quickstart-boot/quickstart-boot-frontend"
 
 # create the archetype project from the project
 cd ./indoqa-quickstart-boot
 mvn clean archetype:create-from-project \
-  -Darchetype.filteredExtensions=json \
+  -DarchetypeFilteredExtentions=json \
   -Drat.skip=true \
   -P !frontend
 
