@@ -1,10 +1,11 @@
+bin
 target
+*.iml
+tsconfig.base.json
+tslint.json
 .settings
 .classpath
 .project
-bin
 .metadata
 .recommenders
-monitor.json 
-*.iml
 .idea
