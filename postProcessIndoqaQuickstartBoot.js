@@ -49,28 +49,5 @@ const modifyFrontendPackageJson = () => {
   console.log(`Modified ${baseFilePath}`)
 }
 
-const createGitignore = () => {
-  const gitIgnorePath = './indoqa-quickstart-boot/target/generated-sources/archetype/src/main/resources/archetype-resources/.gitignore'
-  const data = `bin
-build
-node_modules
-target
-.cache-loader
-.classpath
-.idea
-.metadata
-.project
-.recommenders
-.settings
-*.iml`
-
-  fs.writeFileSync(gitIgnorePath, data, 'utf8', (err) => {
-     if (err) return console.log(err)
-  })
-
-  console.log(`Created ${gitIgnorePath}`)
-}
-
 modifyRootPackageJson()
 modifyFrontendPackageJson()
-createGitignore()
