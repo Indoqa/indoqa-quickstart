@@ -1,22 +1,17 @@
 #!/bin/sh
 
 # sync frontend with indoqa-react-redux
-#rsync -a -v --delete \
-#  --exclude "node_modules" \
-#  --exclude ".gitignore" \
-#  --exclude "pom.xml" \
-#  --exclude "dist-zip.xml" \
-#  --exclude "src/doc" \
-#  --exclude "compiled" \
-#  --exclude "build" \
-#  --exclude "README.md" \
-#  --exclude "CHANGELOG.md" \
-#  --exclude "indoqa-react-redux.iml" \
-#  --exclude "yarn.lock" \
-#  --exclude ".git" \
-#  --exclude ".idea" \
-#  --exclude ".vscode" \
-#  ../indoqa-react/packages/react-starter/ "./indoqa-quickstart-boot/quickstart-boot-frontend"
+rsync -a -v --delete \
+  --include "public/***" \
+  --include "src/***" \
+  --exclude "*" \
+  ../indoqa-react/packages/react-starter/ "./indoqa-quickstart-boot/quickstart-boot-frontend"
+
+rsync -a -v --delete \
+  --include "tsconfig.base.json" \
+  --include "tslint.json" \
+  --exclude "*" \
+  ../indoqa-react "./indoqa-quickstart-boot"
 
 # create the archetype project from the project
 cd ./indoqa-quickstart-boot
