@@ -12,11 +12,8 @@
 
   <fileSets>
     <fileSet>
-      <directory>target/webpack/</directory>
-      <excludes>
-        <exclude>index.html</exclude>
-      </excludes>
-      <outputDirectory>${project.artifactId}</outputDirectory>
+      <directory>./build</directory>
+      <outputDirectory>${project.artifactId}/</outputDirectory>
     </fileSet>
   </fileSets>
 

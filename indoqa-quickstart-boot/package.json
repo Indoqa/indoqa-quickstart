@@ -1,5 +1,5 @@
 {
-  "name": "${artifactId}-frontend",
+  "name": "quickstart-boot",
   "private": true,
   "scripts": {
     "bootstrap": "lerna bootstrap",
@@ -30,6 +30,6 @@
     "typescript": "^3.3.3"
   },
   "workspaces": [
-    "${artifactId}-frontend"
+    "quickstart-boot-frontend"
   ]
 }

@@ -21,7 +21,7 @@
 # create the archetype project from the project
 cd ./indoqa-quickstart-boot
 mvn clean archetype:create-from-project \
-  -DarchetypeFilteredExtentions=json \
+  -Darchetype.filteredExtentions=json \
   -Drat.skip=true \
   -P !frontend
 
