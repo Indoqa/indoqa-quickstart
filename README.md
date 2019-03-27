@@ -11,6 +11,7 @@ mvn archetype:generate -DarchetypeCatalog=local
 * release @indoqa projects (-> upgrade all dependencies)
 * release indoqa-boot-bom
 * release indoqa-boot (set the version of indoqa-boot-bom to the released version because using ${project.version} does not resolve correctly)
+* release indoqa-boot-actuators
 * set the indoqa-boot version of this archetype project to the expected version
 * uncomment the sync to indoqa-quickstart-boot_release in createIndoqaBootArchetype.sh
 * trigger the release (see below)
