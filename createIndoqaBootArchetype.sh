@@ -35,7 +35,6 @@ cd ../../../../
 #  --exclude "README.md" \
 #  --exclude ".gitignore" \
 #  --exclude "LICENSE" \
-#  --exclude "pom.xml" \
 #  --exclude "target" \
 #  --exclude ".git" \
 #  ./indoqa-quickstart-boot/target/generated-sources/archetype/ ../indoqa-quickstart-boot_release
