@@ -13,7 +13,7 @@
   </parent>
 
   <artifactId>quickstart-boot-frontend</artifactId>
-  <name>Quickstart Indoqa Boot: Frontend</name>
+  <name>Frontend</name>
 
   <profiles>
     <profile>

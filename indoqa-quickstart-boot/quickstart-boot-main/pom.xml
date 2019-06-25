@@ -12,7 +12,7 @@
   </parent>
 
   <artifactId>quickstart-boot-main</artifactId>
-  <name>Quickstart Indoqa Boot: Main</name>
+  <name>Main</name>
 
   <dependencies>
     <!-- Indoqa Boot -->
