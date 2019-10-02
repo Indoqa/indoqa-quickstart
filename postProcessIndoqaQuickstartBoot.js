@@ -16,7 +16,7 @@ const modifyRootPackageJson = () => {
 
   const includeFilePath = '../indoqa-react/package.json'
   const packageJson = JSON.parse(fs.readFileSync(includeFilePath, 'utf8'));
-  packageJson.devDependencies["react-scripts"] = "^2.1.8"
+  packageJson.devDependencies["react-scripts"] = "3.1.2"
   const resultDevDependencies = {}
   Object.keys(packageJson.devDependencies).sort().forEach(key => {
     if (key.startsWith('@types') || allowedDevDependencies.includes(key)) {
