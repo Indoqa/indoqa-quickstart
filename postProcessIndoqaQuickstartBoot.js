@@ -16,7 +16,7 @@ const modifyRootPackageJson = () => {
 
   const includeFilePath = '../indoqa-react/package.json'
   const packageJson = JSON.parse(fs.readFileSync(includeFilePath, 'utf8'));
-  packageJson.devDependencies["react-scripts"] = "3.1.2"
+  packageJson.devDependencies["react-scripts"] = "3.3.0"
   const resultDevDependencies = {}
   Object.keys(packageJson.devDependencies).sort().forEach(key => {
     if (key.startsWith('@types') || allowedDevDependencies.includes(key)) {
@@ -75,6 +75,19 @@ const modifyPom = () => {
   console.log(`Modified ${pomPath}`)
 }
 
+const modifySvg = () => {
+  const overviewTsxPath = './indoqa-quickstart-boot/target/generated-sources/archetype/src/main/resources/archetype-resources/__rootArtifactId__-frontend/src/overview/pages/OverviewPage.tsx'
+  const replacement = 'import {ReactComponent as SourceCodeImage}'
+  const data = fs.readFileSync(overviewTsxPath, 'utf8')
+  const result = data.replace(/import SourceCodeImage/g, replacement)
+  fs.writeFileSync(overviewTsxPath, result, 'utf8', (err) => {
+     if (err) return console.log(err)
+  })
+
+  console.log(`Modified ${overviewTsxPath}`)
+}
+
 modifyRootPackageJson()
 modifyFrontendPackageJson()
 modifyPom()
+modifySvg()
