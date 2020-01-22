@@ -15,6 +15,7 @@ rsync -a -v --delete \
 
 # create the archetype project from the project
 cd ./indoqa-quickstart-boot
+rm -r ./target
 mvn clean archetype:create-from-project \
   -Darchetype.filteredExtentions=json,java \
   -Drat.skip=true \
@@ -26,7 +27,8 @@ node postProcessIndoqaQuickstartBoot.js
 
 # locally install the archetype
 cd ./indoqa-quickstart-boot/target/generated-sources/archetype/
-mvn install -Drat.skip=true
+mvn clean install -Drat.skip=true
+pwd
 
 cd ../../../../
 
