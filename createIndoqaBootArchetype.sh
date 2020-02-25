@@ -11,7 +11,7 @@ rsync -a -v --delete \
   --include "tsconfig.base.json" \
   --include "tslint.json" \
   --exclude "*" \
-  ../indoqa-react "./indoqa-quickstart-boot"
+  ../indoqa-react/ "./indoqa-quickstart-boot"
 
 # create the archetype project from the project
 cd ./indoqa-quickstart-boot
